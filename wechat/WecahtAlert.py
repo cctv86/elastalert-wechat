@@ -21,7 +21,6 @@ class WechatAlerter(Alerter):
         for match in matches:
             print("match",match)
             message = match.get("message")
-            logrecordtime = match.get("logRecordTime")
             loglevel = match.get("logLevel")
             node = match.get("node","")
             self.push_weixin(index_name_without_symbol,loglevel,node,message)
